@@ -1,0 +1,24 @@
+*** Settings ***
+Resource          ../resources/main/main.txt
+
+*** Variables ***
+${loc_tabPage}    xpath=//a[@title='<tabName>']  
+
+
+*** Keywords ***
+Click Tab Bar
+    [Arguments]    ${tabName}
+    [Documentation]    Go to Tab page as specified in argument
+    ${loc_tabPage}=    Replace String    ${loc_tabPage}    <tabName>    ${tabName}
+    Wait Until Element Is Visible    ${loc_tabPage}    ${WAIT}
+    Click Element    ${loc_tabPage}
+    
+   #Clicks the tab
+    Wait Until Element is Visible    ${loc_tabPage}    ${WAIT}
+    Click Element    xpath=//a[@title='Women']
+    
+    #Verifes on Correct page
+    ${someText}=    Get Text    xpath=//h2[@class="title_block"]
+    ${status}=    Evaluate    '${someText}'=='${tabName}'
+    
+    

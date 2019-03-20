@@ -1,0 +1,7 @@
+*** Settings ***
+
+
+*** Keywords ***
+Basic Selenium Test Teardown
+    [Documentation]    - basic teardown
+    Close All Browsers

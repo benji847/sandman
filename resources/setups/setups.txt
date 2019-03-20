@@ -1,0 +1,7 @@
+*** Settings ***
+
+
+*** Keywords ***
+Basic Selenium Test Setup
+    [Documentation]    basic setup
+    open browser    about:blank    chrome    # This is the default keyword we have set to be run at the start of each test case, unless the test case defines its own test setup.
