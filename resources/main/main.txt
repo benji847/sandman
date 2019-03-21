@@ -6,6 +6,8 @@ Library           Collections
 
 *** Variables ***
 ${WAIT}           30s
+${USER}           paraagq@hotmail.com
+${PSWD}           autoPro6         
 
 
 

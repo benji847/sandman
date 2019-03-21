@@ -15,7 +15,7 @@ Click Tab Bar
     
    #Clicks the tab
     Wait Until Element is Visible    ${loc_tabPage}    ${WAIT}
-    Click Element    xpath=//a[@title='Women']
+    Click Element    ${loc_tabPage}
     
     #Verifes on Correct page
     ${someText}=    Get Text    xpath=//h2[@class="title_block"]

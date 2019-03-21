@@ -5,6 +5,7 @@ Resource          ../resources/setups/setups.txt
 Resource          ../resources/teardowns/teardowns.txt
 Resource          ../resources/main/main.txt
 Resource          ../resources/navigation_bar/navigationBar.txt
+Resource          ../resources/login_widget/loginWidget.txt
 
 
 *** Test Cases ***
@@ -14,13 +15,9 @@ mainFlowTest
     Go To    http://automationpractice.com/index.php
    
     #Sign in
-    Wait Until Element is Visible    xpath=//a[@class='login']    ${WAIT}    
-    Click Element    xpath=//a[@class='login']
-    Input Text    css=#email    paraagq@hotmail.com
-    Input Text    css=#passwd    autoPro6
-    Click Element    css=#SubmitLogin
-  
-    #Verifies that the cart is empty
+    Sign In
+   
+   #Verifies that the cart is empty
     ${someText}=    Get Text    xpath=//div[@class='shopping_cart']//span[@class="ajax_cart_no_product"]    
     ${status}=    Evaluate    '${someText}'=='(empty)'
     
@@ -59,8 +56,7 @@ mainFlowTest
     Should Be Equal As Strings    ${productCount}    ${x}   
     
     #Logout
-    Click Element    xpath=//a[@title='Log me out']
-    Wait Until Element is Visible    xpath=//a[@class='login']    ${WAIT}   
+     Logout
     
    
 *** Keywords ***

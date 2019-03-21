@@ -1,0 +1,17 @@
+*** Settings ***
+Resource          ../resources/main/main.txt
+
+*** Variables ***
+
+*** Keywords ***
+Sign In
+    [Documentation]    Sign in 
+    Wait Until Element is Visible    xpath=//a[@class='login']    ${WAIT}    
+    Click Element    xpath=//a[@class='login']
+    Input Text    css=#email    ${USER}
+    Input Text    css=#passwd    ${PSWD}
+    Click Element    css=#SubmitLogin
+    
+Logout
+    Click Element    xpath=//a[@title='Log me out']
+    Wait Until Element is Visible    xpath=//a[@class='login']    ${WAIT}  
