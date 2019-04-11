@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190404 16:40:34.678" generator="Robot 3.0.1 (Python 2.7.9 on win32)">
-<suite source="C:\Users\paraag\Documents\my_automation_tests_robot\solver_new\tests\solverFlow2.robot" id="s1" name="solverFlow2">
+<robot generated="20190410 22:08:22.704" generator="Robot 3.0.1 (Python 2.7.9 on win32)">
+<suite source="C:\Users\paraag\Documents\my_automation_tests_robot\solver_new2\sandman\tests\solverFlow2.robot" id="s1" name="solverFlow2">
 <test id="s1-t1" name="mainFlowTest">
 <kw type="setup" name="Basic Selenium Test Setup" library="setups">
 <doc>basic setup</doc>
@@ -10,18 +10,18 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20190404 16:40:34.819" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20190404 16:40:37.004" starttime="20190404 16:40:34.819"></status>
+<msg timestamp="20190410 22:08:22.891" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20190410 22:08:25.118" starttime="20190410 22:08:22.891"></status>
 </kw>
-<status status="PASS" endtime="20190404 16:40:37.004" starttime="20190404 16:40:34.819"></status>
+<status status="PASS" endtime="20190410 22:08:25.119" starttime="20190410 22:08:22.891"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
 <arg>http://automationpractice.com/index.php</arg>
 </arguments>
-<msg timestamp="20190404 16:40:37.005" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20190404 16:41:04.186" starttime="20190404 16:40:37.005"></status>
+<msg timestamp="20190410 22:08:25.119" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20190410 22:08:30.685" starttime="20190410 22:08:25.119"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
@@ -29,15 +29,15 @@
 <arg>xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]</arg>
 <arg>${WAIT}</arg>
 </arguments>
-<status status="PASS" endtime="20190404 16:41:04.223" starttime="20190404 16:41:04.187"></status>
+<status status="PASS" endtime="20190410 22:08:30.716" starttime="20190410 22:08:30.686"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
 <arg>xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]</arg>
 </arguments>
-<msg timestamp="20190404 16:41:04.223" level="INFO">Clicking element 'xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]'.</msg>
-<status status="PASS" endtime="20190404 16:41:15.451" starttime="20190404 16:41:04.223"></status>
+<msg timestamp="20190410 22:08:30.716" level="INFO">Clicking element 'xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]'.</msg>
+<status status="PASS" endtime="20190410 22:08:33.104" starttime="20190410 22:08:30.716"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
@@ -45,26 +45,178 @@
 <arg>xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]</arg>
 <arg>${WAIT}</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20190404 16:41:45.851" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190404 16:41:45.851" starttime="20190404 16:41:45.468"></status>
+<status status="PASS" endtime="20190410 22:08:33.147" starttime="20190410 22:08:33.104"></status>
 </kw>
-<msg timestamp="20190404 16:41:45.851" level="FAIL">Element locator 'xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]' did not match any elements after 30 seconds</msg>
-<status status="FAIL" endtime="20190404 16:41:45.851" starttime="20190404 16:41:15.452"></status>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]</arg>
+</arguments>
+<msg timestamp="20190410 22:08:33.148" level="INFO">Clicking element 'xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]'.</msg>
+<status status="PASS" endtime="20190410 22:08:34.857" starttime="20190410 22:08:33.148"></status>
+</kw>
+<kw name="Get Matching Xpath Count" library="Selenium2Library">
+<doc>Returns number of elements matching `xpath`</doc>
+<arguments>
+<arg>xpath=//div[@class='product-image-container']//img[contains(concat(' ', @title, ' '), ' Printed')]</arg>
+</arguments>
+<assign>
+<var>${summerCount}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.879" level="INFO">${summerCount} = 3</msg>
+<status status="PASS" endtime="20190410 22:08:34.879" starttime="20190410 22:08:34.858"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='heading-counter']</arg>
+</arguments>
+<assign>
+<var>${counterLabel}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.909" level="INFO">${counterLabel} = There are 3 products.</msg>
+<status status="PASS" endtime="20190410 22:08:34.909" starttime="20190410 22:08:34.880"></status>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<doc>Converts the given item to a Unicode string.</doc>
+<arguments>
+<arg>${summerCount}</arg>
+</arguments>
+<assign>
+<var>${summerCount}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.910" level="INFO">${summerCount} = 3</msg>
+<status status="PASS" endtime="20190410 22:08:34.910" starttime="20190410 22:08:34.910"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='heading-counter']</arg>
+</arguments>
+<assign>
+<var>${counterLabel}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.925" level="INFO">${counterLabel} = There are 3 products.</msg>
+<status status="PASS" endtime="20190410 22:08:34.926" starttime="20190410 22:08:34.911"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${counterLabel}</arg>
+<arg>${summerCount}</arg>
+</arguments>
+<status status="PASS" endtime="20190410 22:08:34.926" starttime="20190410 22:08:34.926"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//div[@class='product-count'])[1]</arg>
+</arguments>
+<assign>
+<var>${counterLabel}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.948" level="INFO">${counterLabel} = Showing 1 - 3 of 3 items</msg>
+<status status="PASS" endtime="20190410 22:08:34.948" starttime="20190410 22:08:34.927"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${counterLabel}</arg>
+<arg>${summerCount}</arg>
+</arguments>
+<status status="PASS" endtime="20190410 22:08:34.948" starttime="20190410 22:08:34.948"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=(//div[@class='product-count'])[2]</arg>
+</arguments>
+<assign>
+<var>${counterLabel}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.979" level="INFO">${counterLabel} = Showing 1 - 3 of 3 items</msg>
+<status status="PASS" endtime="20190410 22:08:34.979" starttime="20190410 22:08:34.948"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${counterLabel}</arg>
+<arg>${summerCount}</arg>
+</arguments>
+<status status="PASS" endtime="20190410 22:08:34.979" starttime="20190410 22:08:34.979"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${False}</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<msg timestamp="20190410 22:08:34.979" level="INFO">${status} = False</msg>
+<status status="PASS" endtime="20190410 22:08:34.979" starttime="20190410 22:08:34.979"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//*[@id='grid' and @class='selected']</arg>
+</arguments>
+<assign>
+<var>${status}</var>
+</assign>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by `locator` is visible.</doc>
+<arguments>
+<arg>xpath=//*[@id='grid' and @class='selected']</arg>
+</arguments>
+<msg timestamp="20190410 22:08:34.979" level="INFO">Verifying element 'xpath=//*[@id='grid' and @class='selected']' is visible.</msg>
+<status status="PASS" endtime="20190410 22:08:34.995" starttime="20190410 22:08:34.979"></status>
+</kw>
+<msg timestamp="20190410 22:08:34.995" level="INFO">${status} = True</msg>
+<status status="PASS" endtime="20190410 22:08:34.995" starttime="20190410 22:08:34.979"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}==${True}</arg>
+<arg>Log Many</arg>
+<arg>grid selected</arg>
+</arguments>
+<kw name="Log Many" library="BuiltIn">
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<arguments>
+<arg>grid selected</arg>
+</arguments>
+<msg timestamp="20190410 22:08:34.995" level="INFO">grid selected</msg>
+<status status="PASS" endtime="20190410 22:08:34.995" starttime="20190410 22:08:34.995"></status>
+</kw>
+<status status="PASS" endtime="20190410 22:08:34.995" starttime="20190410 22:08:34.995"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${status}==${True}</arg>
+<arg>xpath=//ul[@class='product_list row grid']</arg>
+</arguments>
+<kw name="xpath=//ul[@class='product_list row grid']">
+<msg timestamp="20190410 22:08:35.011" level="FAIL">No keyword with name 'xpath=//ul[@class='product_list row grid']' found.</msg>
+<status status="FAIL" endtime="20190410 22:08:35.011" starttime="20190410 22:08:35.011"></status>
+</kw>
+<status status="FAIL" endtime="20190410 22:08:35.011" starttime="20190410 22:08:34.995"></status>
 </kw>
 <kw type="teardown" name="Basic Selenium Test Teardown" library="teardowns">
 <doc>- basic teardown</doc>
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20190404 16:41:47.952" starttime="20190404 16:41:45.851"></status>
+<status status="PASS" endtime="20190410 22:08:37.132" starttime="20190410 22:08:35.011"></status>
 </kw>
-<status status="PASS" endtime="20190404 16:41:47.952" starttime="20190404 16:41:45.851"></status>
+<status status="PASS" endtime="20190410 22:08:37.132" starttime="20190410 22:08:35.011"></status>
 </kw>
 <doc>This is a historic first test</doc>
-<status status="FAIL" endtime="20190404 16:41:47.952" critical="yes" starttime="20190404 16:40:34.819">Element locator 'xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]' did not match any elements after 30 seconds</status>
+<status status="FAIL" endtime="20190410 22:08:37.132" critical="yes" starttime="20190410 22:08:22.891">No keyword with name 'xpath=//ul[@class='product_list row grid']' found.</status>
 </test>
-<status status="FAIL" endtime="20190404 16:41:47.952" starttime="20190404 16:40:34.678"></status>
+<status status="FAIL" endtime="20190410 22:08:37.132" starttime="20190410 22:08:22.704"></status>
 </suite>
 <statistics>
 <total>
