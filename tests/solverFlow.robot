@@ -6,6 +6,7 @@ Resource          ../resources/teardowns/teardowns.txt
 Resource          ../resources/main/main.txt
 Resource          ../resources/navigation_bar/navigationBar.txt
 Resource          ../resources/login_widget/loginWidget.txt
+Resource          ../resources/shoppingCart_widget/shoppingCart.txt
 
 
 *** Test Cases ***
@@ -18,8 +19,7 @@ mainFlowTest
     Sign In
    
    #Verifies that the cart is empty
-    ${someText}=    Get Text    xpath=//div[@class='shopping_cart']//span[@class="ajax_cart_no_product"]    
-    ${status}=    Evaluate    '${someText}'=='(empty)'
+    Is Shopping Cart Empty    
     
     #Clicks the Women tab and Verifes on Women page
     ${tabName}=    Set Variable    Women

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20190321 06:39:11.693" generator="Robot 3.0.1 (Python 2.7.9 on win32)">
-<suite source="C:\Users\paraag\Documents\my_automation_tests_robot\solver_new\tests\solverFlow.robot" id="s1" name="solverFlow">
+<robot generated="20190404 16:40:34.678" generator="Robot 3.0.1 (Python 2.7.9 on win32)">
+<suite source="C:\Users\paraag\Documents\my_automation_tests_robot\solver_new\tests\solverFlow2.robot" id="s1" name="solverFlow2">
 <test id="s1-t1" name="mainFlowTest">
 <kw type="setup" name="Basic Selenium Test Setup" library="setups">
 <doc>basic setup</doc>
@@ -10,426 +10,73 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 </arguments>
-<msg timestamp="20190321 06:39:11.849" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
-<status status="PASS" endtime="20190321 06:39:14.692" starttime="20190321 06:39:11.849"></status>
+<msg timestamp="20190404 16:40:34.819" level="INFO">Opening browser 'chrome' to base url 'about:blank'</msg>
+<status status="PASS" endtime="20190404 16:40:37.004" starttime="20190404 16:40:34.819"></status>
 </kw>
-<status status="PASS" endtime="20190321 06:39:14.692" starttime="20190321 06:39:11.849"></status>
+<status status="PASS" endtime="20190404 16:40:37.004" starttime="20190404 16:40:34.819"></status>
 </kw>
 <kw name="Go To" library="Selenium2Library">
 <doc>Navigates the active browser instance to the provided URL.</doc>
 <arguments>
 <arg>http://automationpractice.com/index.php</arg>
 </arguments>
-<msg timestamp="20190321 06:39:14.693" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" endtime="20190321 06:39:18.960" starttime="20190321 06:39:14.693"></status>
-</kw>
-<kw name="Sign In" library="loginWidget">
-<doc>Sign in</doc>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//a[@class='login']</arg>
-<arg>${WAIT}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:18.997" starttime="20190321 06:39:18.961"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//a[@class='login']</arg>
-</arguments>
-<msg timestamp="20190321 06:39:18.997" level="INFO">Clicking element 'xpath=//a[@class='login']'.</msg>
-<status status="PASS" endtime="20190321 06:39:21.114" starttime="20190321 06:39:18.997"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>css=#email</arg>
-<arg>${USER}</arg>
-</arguments>
-<msg timestamp="20190321 06:39:21.115" level="INFO">Typing text 'paraagq@hotmail.com' into text field 'css=#email'</msg>
-<status status="PASS" endtime="20190321 06:39:21.260" starttime="20190321 06:39:21.115"></status>
-</kw>
-<kw name="Input Text" library="Selenium2Library">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>css=#passwd</arg>
-<arg>${PSWD}</arg>
-</arguments>
-<msg timestamp="20190321 06:39:21.261" level="INFO">Typing text 'autoPro6' into text field 'css=#passwd'</msg>
-<status status="PASS" endtime="20190321 06:39:21.367" starttime="20190321 06:39:21.261"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>css=#SubmitLogin</arg>
-</arguments>
-<msg timestamp="20190321 06:39:21.368" level="INFO">Clicking element 'css=#SubmitLogin'.</msg>
-<status status="PASS" endtime="20190321 06:39:23.028" starttime="20190321 06:39:21.367"></status>
-</kw>
-<status status="PASS" endtime="20190321 06:39:23.028" starttime="20190321 06:39:18.960"></status>
-</kw>
-<kw name="Get Text" library="Selenium2Library">
-<doc>Returns the text value of element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//div[@class='shopping_cart']//span[@class="ajax_cart_no_product"]</arg>
-</arguments>
-<assign>
-<var>${someText}</var>
-</assign>
-<msg timestamp="20190321 06:39:23.073" level="INFO">${someText} = (empty)</msg>
-<status status="PASS" endtime="20190321 06:39:23.073" starttime="20190321 06:39:23.031"></status>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'${someText}'=='(empty)'</arg>
-</arguments>
-<assign>
-<var>${status}</var>
-</assign>
-<msg timestamp="20190321 06:39:23.075" level="INFO">${status} = True</msg>
-<status status="PASS" endtime="20190321 06:39:23.075" starttime="20190321 06:39:23.073"></status>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>Women</arg>
-</arguments>
-<assign>
-<var>${tabName}</var>
-</assign>
-<msg timestamp="20190321 06:39:23.076" level="INFO">${tabName} = Women</msg>
-<status status="PASS" endtime="20190321 06:39:23.076" starttime="20190321 06:39:23.075"></status>
-</kw>
-<kw name="Click Tab Bar" library="navigationBar">
-<doc>Go to Tab page as specified in argument</doc>
-<arguments>
-<arg>${tabName}</arg>
-</arguments>
-<kw name="Replace String" library="String">
-<doc>Replaces ``search_for`` in the given ``string`` with ``replace_with``.</doc>
-<arguments>
-<arg>${loc_tabPage}</arg>
-<arg>&lt;tabName&gt;</arg>
-<arg>${tabName}</arg>
-</arguments>
-<assign>
-<var>${loc_tabPage}</var>
-</assign>
-<msg timestamp="20190321 06:39:23.078" level="INFO">${loc_tabPage} = xpath=//a[@title='Women']</msg>
-<status status="PASS" endtime="20190321 06:39:23.078" starttime="20190321 06:39:23.077"></status>
+<msg timestamp="20190404 16:40:37.005" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" endtime="20190404 16:41:04.186" starttime="20190404 16:40:37.005"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>${loc_tabPage}</arg>
+<arg>xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]</arg>
 <arg>${WAIT}</arg>
 </arguments>
-<status status="PASS" endtime="20190321 06:39:23.106" starttime="20190321 06:39:23.078"></status>
+<status status="PASS" endtime="20190404 16:41:04.223" starttime="20190404 16:41:04.187"></status>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <doc>Click element identified by `locator`.</doc>
 <arguments>
-<arg>${loc_tabPage}</arg>
+<arg>xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]</arg>
 </arguments>
-<msg timestamp="20190321 06:39:23.107" level="INFO">Clicking element 'xpath=//a[@title='Women']'.</msg>
-<status status="PASS" endtime="20190321 06:39:25.156" starttime="20190321 06:39:23.106"></status>
+<msg timestamp="20190404 16:41:04.223" level="INFO">Clicking element 'xpath=(//a[@title='Dresses' and @class='sf-with-ul'])[2]'.</msg>
+<status status="PASS" endtime="20190404 16:41:15.451" starttime="20190404 16:41:04.223"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="Selenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
-<arg>${loc_tabPage}</arg>
+<arg>xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]</arg>
 <arg>${WAIT}</arg>
 </arguments>
-<status status="PASS" endtime="20190321 06:39:25.184" starttime="20190321 06:39:25.157"></status>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20190404 16:41:45.851" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190404 16:41:45.851" starttime="20190404 16:41:45.468"></status>
 </kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>${loc_tabPage}</arg>
-</arguments>
-<msg timestamp="20190321 06:39:25.185" level="INFO">Clicking element 'xpath=//a[@title='Women']'.</msg>
-<status status="PASS" endtime="20190321 06:39:27.016" starttime="20190321 06:39:25.184"></status>
-</kw>
-<kw name="Get Text" library="Selenium2Library">
-<doc>Returns the text value of element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//h2[@class="title_block"]</arg>
-</arguments>
-<assign>
-<var>${someText}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.055" level="INFO">${someText} = WOMEN</msg>
-<status status="PASS" endtime="20190321 06:39:27.055" starttime="20190321 06:39:27.017"></status>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>'${someText}'=='${tabName}'</arg>
-</arguments>
-<assign>
-<var>${status}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.057" level="INFO">${status} = False</msg>
-<status status="PASS" endtime="20190321 06:39:27.057" starttime="20190321 06:39:27.056"></status>
-</kw>
-<status status="PASS" endtime="20190321 06:39:27.057" starttime="20190321 06:39:23.077"></status>
-</kw>
-<kw name="Get Matching Xpath Count" library="Selenium2Library">
-<doc>Returns number of elements matching `xpath`</doc>
-<arguments>
-<arg>xpath=//span[contains(concat(' ', @class, ' '), ' grower ')]</arg>
-</arguments>
-<assign>
-<var>${count}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.071" level="INFO">${count} = 5</msg>
-<status status="PASS" endtime="20190321 06:39:27.072" starttime="20190321 06:39:27.058"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=(//span[contains(concat(' ', @class, ' '), ' grower ')])[1]</arg>
-</arguments>
-<msg timestamp="20190321 06:39:27.073" level="INFO">Clicking element 'xpath=(//span[contains(concat(' ', @class, ' '), ' grower ')])[1]'.</msg>
-<status status="PASS" endtime="20190321 06:39:27.154" starttime="20190321 06:39:27.072"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=(//span[contains(concat(' ', @class, ' '), ' grower ')])[2]</arg>
-</arguments>
-<msg timestamp="20190321 06:39:27.155" level="INFO">Clicking element 'xpath=(//span[contains(concat(' ', @class, ' '), ' grower ')])[2]'.</msg>
-<status status="PASS" endtime="20190321 06:39:27.234" starttime="20190321 06:39:27.155"></status>
-</kw>
-<kw name="Get Matching Xpath Count" library="Selenium2Library">
-<doc>Returns number of elements matching `xpath`</doc>
-<arguments>
-<arg>xpath=//a[@class='product_img_link']//img[contains(concat(' ', @title, ' '), ' Dress')]</arg>
-</arguments>
-<assign>
-<var>${dressesCount}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.254" level="INFO">${dressesCount} = 5</msg>
-<status status="PASS" endtime="20190321 06:39:27.254" starttime="20190321 06:39:27.235"></status>
-</kw>
-<kw name="Get Matching Xpath Count" library="Selenium2Library">
-<doc>Returns number of elements matching `xpath`</doc>
-<arguments>
-<arg>xpath=//a[@class='product_img_link']//img[contains(concat(' ', @title, ' '), ' Blouse')]</arg>
-</arguments>
-<assign>
-<var>${blouseCount}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.273" level="INFO">${blouseCount} = 1</msg>
-<status status="PASS" endtime="20190321 06:39:27.273" starttime="20190321 06:39:27.255"></status>
-</kw>
-<kw name="Get Matching Xpath Count" library="Selenium2Library">
-<doc>Returns number of elements matching `xpath`</doc>
-<arguments>
-<arg>xpath=//a[@class='product_img_link']//img[contains(concat(' ', @title, ' '), ' T-shirts')]</arg>
-</arguments>
-<assign>
-<var>${shirtcount}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.294" level="INFO">${shirtcount} = 1</msg>
-<status status="PASS" endtime="20190321 06:39:27.294" starttime="20190321 06:39:27.274"></status>
-</kw>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>${dressesCount}+${blouseCount}+${shirtcount}</arg>
-</arguments>
-<assign>
-<var>${itemCount}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.296" level="INFO">${itemCount} = 7</msg>
-<status status="PASS" endtime="20190321 06:39:27.296" starttime="20190321 06:39:27.294"></status>
-</kw>
-<kw name="Get Text" library="Selenium2Library">
-<doc>Returns the text value of element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//span[@class='heading-counter']</arg>
-</arguments>
-<assign>
-<var>${counterLabel}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.338" level="INFO">${counterLabel} = There are 7 products.</msg>
-<status status="PASS" endtime="20190321 06:39:27.338" starttime="20190321 06:39:27.297"></status>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<doc>Converts the given item to a Unicode string.</doc>
-<arguments>
-<arg>${itemCount}</arg>
-</arguments>
-<assign>
-<var>${itemCount}</var>
-</assign>
-<msg timestamp="20190321 06:39:27.339" level="INFO">${itemCount} = 7</msg>
-<status status="PASS" endtime="20190321 06:39:27.339" starttime="20190321 06:39:27.339"></status>
-</kw>
-<kw name="Should Contain" library="BuiltIn">
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<arguments>
-<arg>${counterLabel}</arg>
-<arg>${itemCount}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:27.340" starttime="20190321 06:39:27.340"></status>
-</kw>
-<kw name="Mouse Over" library="Selenium2Library">
-<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
-<arguments>
-<arg>xpath=(//a[@class='product_img_link']//img[contains(concat(' ', @title, ' '), ' Dress')])[2]</arg>
-</arguments>
-<msg timestamp="20190321 06:39:27.341" level="INFO">Simulating Mouse Over on element 'xpath=(//a[@class='product_img_link']//img[contains(concat(' ', @title, ' '), ' Dress')])[2]'</msg>
-<status status="PASS" endtime="20190321 06:39:27.393" starttime="20190321 06:39:27.341"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//span[text()='Add to cart']</arg>
-</arguments>
-<msg timestamp="20190321 06:39:27.394" level="INFO">Clicking element 'xpath=//span[text()='Add to cart']'.</msg>
-<status status="PASS" endtime="20190321 06:39:27.537" starttime="20190321 06:39:27.394"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//div[@class='clearfix']</arg>
-<arg>${WAIT}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:28.478" starttime="20190321 06:39:27.538"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//div[@class='button-container']//a</arg>
-<arg>${WAIT}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:28.519" starttime="20190321 06:39:28.478"></status>
-</kw>
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//div[@class='button-container']//a</arg>
-</arguments>
-<msg timestamp="20190321 06:39:28.520" level="INFO">Clicking element 'xpath=//div[@class='button-container']//a'.</msg>
-<status status="PASS" endtime="20190321 06:39:29.956" starttime="20190321 06:39:28.520"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//span[@class='ajax_cart_quantity']</arg>
-<arg>${WAIT}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:29.997" starttime="20190321 06:39:29.957"></status>
-</kw>
-<kw name="Mouse Over" library="Selenium2Library">
-<doc>Simulates hovering mouse over the element specified by `locator`.</doc>
-<arguments>
-<arg>xpath=//span[@class='ajax_cart_quantity']</arg>
-</arguments>
-<msg timestamp="20190321 06:39:29.997" level="INFO">Simulating Mouse Over on element 'xpath=//span[@class='ajax_cart_quantity']'</msg>
-<status status="PASS" endtime="20190321 06:39:30.028" starttime="20190321 06:39:29.997"></status>
-</kw>
-<kw name="Get Text" library="Selenium2Library">
-<doc>Returns the text value of element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//span[@class='ajax_cart_quantity']</arg>
-</arguments>
-<assign>
-<var>${productCount}</var>
-</assign>
-<msg timestamp="20190321 06:39:30.059" level="INFO">${productCount} = 1</msg>
-<status status="PASS" endtime="20190321 06:39:30.059" starttime="20190321 06:39:30.028"></status>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<doc>Converts the given item to a Unicode string.</doc>
-<arguments>
-<arg>${productCount}</arg>
-</arguments>
-<assign>
-<var>${productCount}</var>
-</assign>
-<msg timestamp="20190321 06:39:30.061" level="INFO">${productCount} = 1</msg>
-<status status="PASS" endtime="20190321 06:39:30.062" starttime="20190321 06:39:30.061"></status>
-</kw>
-<kw name="Set Variable" library="BuiltIn">
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<arguments>
-<arg>1</arg>
-</arguments>
-<assign>
-<var>${x}</var>
-</assign>
-<msg timestamp="20190321 06:39:30.062" level="INFO">${x} = 1</msg>
-<status status="PASS" endtime="20190321 06:39:30.062" starttime="20190321 06:39:30.062"></status>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<doc>Converts the given item to a Unicode string.</doc>
-<arguments>
-<arg>${x}</arg>
-</arguments>
-<assign>
-<var>${x}</var>
-</assign>
-<msg timestamp="20190321 06:39:30.063" level="INFO">${x} = 1</msg>
-<status status="PASS" endtime="20190321 06:39:30.063" starttime="20190321 06:39:30.063"></status>
-</kw>
-<kw name="Should Be Equal As Strings" library="BuiltIn">
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<arguments>
-<arg>${productCount}</arg>
-<arg>${x}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:30.064" starttime="20190321 06:39:30.064"></status>
-</kw>
-<kw name="Logout" library="loginWidget">
-<kw name="Click Element" library="Selenium2Library">
-<doc>Click element identified by `locator`.</doc>
-<arguments>
-<arg>xpath=//a[@title='Log me out']</arg>
-</arguments>
-<msg timestamp="20190321 06:39:30.066" level="INFO">Clicking element 'xpath=//a[@title='Log me out']'.</msg>
-<status status="PASS" endtime="20190321 06:39:31.515" starttime="20190321 06:39:30.066"></status>
-</kw>
-<kw name="Wait Until Element Is Visible" library="Selenium2Library">
-<doc>Waits until element specified with `locator` is visible.</doc>
-<arguments>
-<arg>xpath=//a[@class='login']</arg>
-<arg>${WAIT}</arg>
-</arguments>
-<status status="PASS" endtime="20190321 06:39:31.547" starttime="20190321 06:39:31.516"></status>
-</kw>
-<status status="PASS" endtime="20190321 06:39:31.547" starttime="20190321 06:39:30.065"></status>
+<msg timestamp="20190404 16:41:45.851" level="FAIL">Element locator 'xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]' did not match any elements after 30 seconds</msg>
+<status status="FAIL" endtime="20190404 16:41:45.851" starttime="20190404 16:41:15.452"></status>
 </kw>
 <kw type="teardown" name="Basic Selenium Test Teardown" library="teardowns">
 <doc>- basic teardown</doc>
 <kw name="Close All Browsers" library="Selenium2Library">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" endtime="20190321 06:39:33.656" starttime="20190321 06:39:31.548"></status>
+<status status="PASS" endtime="20190404 16:41:47.952" starttime="20190404 16:41:45.851"></status>
 </kw>
-<status status="PASS" endtime="20190321 06:39:33.656" starttime="20190321 06:39:31.548"></status>
+<status status="PASS" endtime="20190404 16:41:47.952" starttime="20190404 16:41:45.851"></status>
 </kw>
 <doc>This is a historic first test</doc>
-<status status="PASS" endtime="20190321 06:39:33.656" critical="yes" starttime="20190321 06:39:11.849"></status>
+<status status="FAIL" endtime="20190404 16:41:47.952" critical="yes" starttime="20190404 16:40:34.819">Element locator 'xpath=(//a[contains(concat(' ', @title, ' '), ' summer')])[1]' did not match any elements after 30 seconds</status>
 </test>
-<status status="PASS" endtime="20190321 06:39:33.656" starttime="20190321 06:39:11.693"></status>
+<status status="FAIL" endtime="20190404 16:41:47.952" starttime="20190404 16:40:34.678"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="solverFlow" pass="1">solverFlow</stat>
+<stat fail="1" id="s1" name="solverFlow2" pass="0">solverFlow2</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20190321 06:39:11.849" level="ERROR">Error in file 'C:\Users\paraag\Documents\my_automation_tests_robot\solver_new\resources\navigation_bar\navigationBar.txt': Resource file '..\resources\main\main.txt' does not exist.</msg>
-<msg timestamp="20190321 06:39:11.849" level="ERROR">Error in file 'C:\Users\paraag\Documents\my_automation_tests_robot\solver_new\resources\login_widget\loginWidget.txt': Resource file '..\resources\main\main.txt' does not exist.</msg>
 </errors>
 </robot>

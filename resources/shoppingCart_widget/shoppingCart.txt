@@ -1,0 +1,14 @@
+*** Settings ***
+Resource           ../main/main.txt
+
+
+*** Variables ***
+${loc_shoppingCart}    xpath=//div[@class='shopping_cart']//span[@class="ajax_cart_no_product"] 
+
+
+*** Keywords ***
+Is Shopping Cart Empty
+    [Documentation]    Determines if shopping cart is empty
+    ${someText}=    Get Text    ${loc_shoppingCart}    
+    ${status}=    Evaluate    '${someText}'=='(empty)'
+    
